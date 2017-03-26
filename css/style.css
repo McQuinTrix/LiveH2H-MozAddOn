@@ -1,0 +1,165 @@
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+.container {
+    /* avoid an excessively wide status text */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 400px;
+    color: white;
+}
+.main-body{
+    float: right;
+    margin-bottom: 16px;
+    width: 385px;
+}
+.logo-container{
+    height: 50px;
+    padding: 10px 0px 5px;
+}
+img.meet-logo{
+    display: inline-block;
+}
+span.logo{
+    display: inline-block;
+    font-size: 3em;
+    position: relative;
+    top: -10px;
+}
+span.logo span{
+    font-weight: 700;
+}
+
+.bottom-border{
+    border: 1px solid white;
+    border-top-width: 0px;
+}
+
+#username + .bottom-border,
+#username-join + .bottom-border,#useremail-join+ .bottom-border, #meeting-id+ .bottom-border,
+#useremail + .bottom-border{
+    height: 4px;
+    width: 70%;
+    margin-top: -3px;
+    transition: 0.3s width;
+}
+
+#username:focus + .bottom-border,
+#useremail:focus + .bottom-border,
+#username-join:focus + .bottom-border, 
+#useremail-join:focus + .bottom-border, 
+#meeting-id:focus + .bottom-border,
+#username-join:focus, 
+#useremail-join:focus, 
+#meeting-id:focus,
+#username:focus,
+#useremail:focus{
+    width: 95%;
+}
+
+#username,
+#useremail,
+#username-join, 
+#useremail-join, 
+#meeting-id{
+    width: 70%;
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    transition: 0.3s width;
+    padding: 0 2px;
+}
+#start-meeting h3{
+    font-size: 1.6em;
+}
+h3,h4{
+    margin: 0.6em 0 0.3em;
+    font-weight: normal;
+}
+h4{
+    font-size: 0.8em;
+}
+
+textarea{
+    display: block;
+    width: 95%;
+    height: 60px;
+}
+
+button{
+    background-color: #671919;
+    border-radius: 5px;
+    border-width: 0px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 1.4em 0;
+    padding: 0.8em 1.6em;
+    letter-spacing: 1.5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px black inset !important;
+    -webkit-text-fill-color: white;
+}
+
+/**
+ * First Look
+ */
+.options-container{
+    height: 300px;
+}
+.option{
+    background-position: center center;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 3px;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    transition: 0.2s all;
+    width: 48%;
+}
+.option:hover{
+    background-color: rgba(256,256,256,0.2);
+}
+.option[data-option='1']{
+    background-image: url("img/video-conference.png");
+}
+.option[data-option='2']{
+    background-image: url("./img/team.png");
+}
+
+span.option-text{
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+/**
+ * Loading
+ */ 
+.load-panel{
+    position: fixed;
+    z-index: 1000 !important;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: url(/img/spinner.gif);
+    background-color: rgba(0, 0, 0, 0.95);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
+}
